@@ -12,8 +12,9 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^4.2.4",
     "react-router-dom": "^6.15.0",
-    "axios": "1.7.9"
+    "axios": "^1.7.9"
   },
+  "jest": { "transformIgnorePatterns": [ "node_modules/(?!axios)" ] },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
