@@ -21,3 +21,14 @@ after_success:
   - docker push ercankurtoglu/multi-nginx
   - docker push ercankurtoglu/multi-server
   - docker push ercankurtoglu/multi-worker
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-1
+  app: multi-docker
+  env: Multi-docker-env
+  bucket_name: elasticbeanstalk-us-east-1-588738596885
+  bucket_path: multi-docker
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
