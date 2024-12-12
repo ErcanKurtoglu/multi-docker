@@ -17,6 +17,7 @@ services:
       - PGDATABASE=$PGDATABASE
       - PGPASSWORD=$PGPASSWORD
       - PGPORT=$PGPORT
+      - NODE_ENV=$NODE_ENV
   client:
     image: "ercankurtoglu/multi-client"
     mem_limit: 128m
